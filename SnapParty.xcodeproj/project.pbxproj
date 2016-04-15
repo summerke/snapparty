@@ -14,6 +14,8 @@
 		F576DEC61CB7963A00767A88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F576DEC41CB7963A00767A88 /* LaunchScreen.storyboard */; };
 		F576DED11CB7963A00767A88 /* SnapPartyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F576DED01CB7963A00767A88 /* SnapPartyTests.swift */; };
 		F576DEDC1CB7963A00767A88 /* SnapPartyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F576DEDB1CB7963A00767A88 /* SnapPartyUITests.swift */; };
+		F576DEEA1CB7C3FE00767A88 /* TakePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F576DEE91CB7C3FE00767A88 /* TakePicture.swift */; };
+		F5786CD81CC10DEC00254CFC /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5786CD71CC10DEC00254CFC /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		F576DED71CB7963A00767A88 /* SnapPartyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapPartyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F576DEDB1CB7963A00767A88 /* SnapPartyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapPartyUITests.swift; sourceTree = "<group>"; };
 		F576DEDD1CB7963A00767A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F576DEE91CB7C3FE00767A88 /* TakePicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePicture.swift; sourceTree = "<group>"; };
+		F5786CD71CC10DEC00254CFC /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				F576DEC21CB7963A00767A88 /* Assets.xcassets */,
 				F576DEC41CB7963A00767A88 /* LaunchScreen.storyboard */,
 				F576DEC71CB7963A00767A88 /* Info.plist */,
+				F576DEE91CB7C3FE00767A88 /* TakePicture.swift */,
+				F5786CD71CC10DEC00254CFC /* RegisterView.swift */,
 			);
 			path = SnapParty;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					F576DEB71CB7963A00767A88 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = ANG3XQ962P;
 					};
 					F576DECB1CB7963A00767A88 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -257,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F576DEBE1CB7963A00767A88 /* ViewController.swift in Sources */,
+				F5786CD81CC10DEC00254CFC /* RegisterView.swift in Sources */,
+				F576DEEA1CB7C3FE00767A88 /* TakePicture.swift in Sources */,
 				F576DEBC1CB7963A00767A88 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,10 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SnapParty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.SnapParty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -408,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SnapParty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.SnapParty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -482,6 +497,7 @@
 				F576DEE21CB7963A00767A88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F576DEE31CB7963A00767A88 /* Build configuration list for PBXNativeTarget "SnapPartyTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +506,7 @@
 				F576DEE51CB7963A00767A88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F576DEE61CB7963A00767A88 /* Build configuration list for PBXNativeTarget "SnapPartyUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +515,7 @@
 				F576DEE81CB7963A00767A88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
