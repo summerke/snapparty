@@ -9,7 +9,7 @@
 import UIKit
 
 class TakePicture: UIViewController {
-
+    
     @IBOutlet weak var currentImage: UIImageView!
     
     let imagePicker: UIImagePickerController! = UIImagePickerController()
@@ -22,12 +22,12 @@ class TakePicture: UIViewController {
                 imagePicker.cameraCaptureMode = .Photo
                 presentViewController(imagePicker, animated: true, completion: {})
             } else {
-             //   postAlert("Rear camera doesn't exist", message: "Application cannot access the camera.")
+                //   postAlert("Rear camera doesn't exist", message: "Application cannot access the camera.")
             }
         } else {
-          //  postAlert("Camera inaccessable", message: "Application cannot access the camera.")
+            //  postAlert("Camera inaccessable", message: "Application cannot access the camera.")
         }
-    
+        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {

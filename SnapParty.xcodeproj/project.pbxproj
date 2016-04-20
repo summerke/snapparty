@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505B02741CC7D70300970189 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505B02731CC7D70300970189 /* LoginView.swift */; };
 		F576DEBC1CB7963A00767A88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F576DEBB1CB7963A00767A88 /* AppDelegate.swift */; };
 		F576DEBE1CB7963A00767A88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F576DEBD1CB7963A00767A88 /* ViewController.swift */; };
 		F576DEC11CB7963A00767A88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F576DEBF1CB7963A00767A88 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		505B02731CC7D70300970189 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F576DEB81CB7963A00767A88 /* SnapParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F576DEBB1CB7963A00767A88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F576DEBD1CB7963A00767A88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				F576DEBB1CB7963A00767A88 /* AppDelegate.swift */,
 				F576DEBD1CB7963A00767A88 /* ViewController.swift */,
 				F576DEBF1CB7963A00767A88 /* Main.storyboard */,
+				505B02731CC7D70300970189 /* LoginView.swift */,
 				F576DEC21CB7963A00767A88 /* Assets.xcassets */,
 				F576DEC41CB7963A00767A88 /* LaunchScreen.storyboard */,
 				F576DEC71CB7963A00767A88 /* Info.plist */,
@@ -266,6 +269,7 @@
 				F576DEBE1CB7963A00767A88 /* ViewController.swift in Sources */,
 				F5786CD81CC10DEC00254CFC /* RegisterView.swift in Sources */,
 				F576DEEA1CB7C3FE00767A88 /* TakePicture.swift in Sources */,
+				505B02741CC7D70300970189 /* LoginView.swift in Sources */,
 				F576DEBC1CB7963A00767A88 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

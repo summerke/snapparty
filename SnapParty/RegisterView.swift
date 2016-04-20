@@ -53,7 +53,7 @@ class RegisterView: UIViewController {
         let request = NSMutableURLRequest(URL: myUrl!)
         request.HTTPMethod = "POST"
         
-        let postString = "email=\(email)&password=\(password)"
+        let postString = "email=\(email!)&password=\(password!)"
         
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         
