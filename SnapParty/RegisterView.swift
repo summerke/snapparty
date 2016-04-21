@@ -14,7 +14,11 @@ class RegisterView: UIViewController {
     @IBOutlet weak var tbEmail: UITextField!
     @IBOutlet weak var tbPassword: UITextField!
     @IBOutlet weak var tbPasswordRepeat: UITextField!
-    
+    @IBOutlet weak var tbName: UITextField!
+    @IBOutlet weak var tbDateOfBirth: UITextField!
+    @IBOutlet weak var tbGender: UITextField!
+    @IBOutlet weak var tbPhoneNumber: UITextField!
+
     // Function alertMessage
     func alertMessage(userMessage: String) {
         // Alert controller
@@ -35,9 +39,13 @@ class RegisterView: UIViewController {
         let email = tbEmail.text
         let password = tbPassword.text
         let passwordRepeat = tbPasswordRepeat.text
+        let name = tbName.text
+        let dateOfBirth = tbDateOfBirth.text
+        let gender = tbGender.text
+        let phoneNumber = tbPhoneNumber.text
         
         // Check for empty fields
-        if (email!.isEmpty || password!.isEmpty || passwordRepeat!.isEmpty) {
+        if (email!.isEmpty || password!.isEmpty || passwordRepeat!.isEmpty || name!.isEmpty || dateOfBirth!.isEmpty || gender!.isEmpty || phoneNumber!.isEmpty) {
                 alertMessage("All fields have to be filled!")
                 return;
         }

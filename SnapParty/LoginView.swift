@@ -71,7 +71,9 @@ class LoginView: UIViewController {
                     if(resultValue == "Success") {
                         //Login is successfull
                         NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
+                        NSUserDefaults.standardUserDefaults().setObject(userEmail, forKey: "userName")
                         NSUserDefaults.standardUserDefaults().synchronize()
+
                         self.dismissViewControllerAnimated(true, completion: nil)
                     }
                     
