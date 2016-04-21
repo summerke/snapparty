@@ -310,10 +310,10 @@
             </objects>
             <point key="canvasLocation" x="1858" y="383"/>
         </scene>
-        <!--Take Picture-->
+        <!--Take Picture2-->
         <scene sceneID="YZf-4u-deR">
             <objects>
-                <viewController id="oQN-jd-mnP" customClass="TakePicture" customModule="SnapParty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oQN-jd-mnP" customClass="TakePicture2" customModule="SnapParty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uKm-vU-eNu"/>
                         <viewControllerLayoutGuide type="bottom" id="9dU-xm-Oyh"/>
@@ -332,9 +332,12 @@
                                 <rect key="frame" x="255" y="57" width="89" height="30"/>
                                 <state key="normal" title="Take picture!"/>
                                 <connections>
-                                    <action selector="BtnTakePicture:" destination="oQN-jd-mnP" eventType="touchUpInside" id="Uu7-nh-WPB"/>
+                                    <action selector="TakePicture:" destination="oQN-jd-mnP" eventType="touchUpInside" id="Qyk-Dg-V3A"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AK7-e1-DSX">
+                                <rect key="frame" x="180" y="205" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -354,6 +357,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageview" destination="AK7-e1-DSX" id="C3a-36-ZvU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JiC-Ay-MEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

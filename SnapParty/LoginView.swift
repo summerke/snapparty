@@ -66,7 +66,7 @@ class LoginView: UIViewController {
                 if let parseJSON = json {
                     var resultValue = parseJSON["status"] as! String!
                     print("result: \(resultValue)")
-                      NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn")
+                   //   NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn")
                     if(resultValue == "Success") {
                         //Login is successfull
                         NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")

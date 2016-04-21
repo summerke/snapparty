@@ -17,6 +17,7 @@
 		F576DEDC1CB7963A00767A88 /* SnapPartyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F576DEDB1CB7963A00767A88 /* SnapPartyUITests.swift */; };
 		F576DEEA1CB7C3FE00767A88 /* TakePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F576DEE91CB7C3FE00767A88 /* TakePicture.swift */; };
 		F5786CD81CC10DEC00254CFC /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5786CD71CC10DEC00254CFC /* RegisterView.swift */; };
+		F580DEA01CC8F9E800D88D74 /* TakePicture2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F580DE9F1CC8F9E800D88D74 /* TakePicture2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F576DEDD1CB7963A00767A88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F576DEE91CB7C3FE00767A88 /* TakePicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePicture.swift; sourceTree = "<group>"; };
 		F5786CD71CC10DEC00254CFC /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		F580DE9F1CC8F9E800D88D74 /* TakePicture2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePicture2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				F576DEC41CB7963A00767A88 /* LaunchScreen.storyboard */,
 				F576DEC71CB7963A00767A88 /* Info.plist */,
 				F576DEE91CB7C3FE00767A88 /* TakePicture.swift */,
+				F580DE9F1CC8F9E800D88D74 /* TakePicture2.swift */,
 				F5786CD71CC10DEC00254CFC /* RegisterView.swift */,
 			);
 			path = SnapParty;
@@ -202,7 +205,7 @@
 				TargetAttributes = {
 					F576DEB71CB7963A00767A88 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = G72CA7H665;
+						DevelopmentTeam = ANG3XQ962P;
 					};
 					F576DECB1CB7963A00767A88 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F580DEA01CC8F9E800D88D74 /* TakePicture2.swift in Sources */,
 				F576DEBE1CB7963A00767A88 /* ViewController.swift in Sources */,
 				F5786CD81CC10DEC00254CFC /* RegisterView.swift in Sources */,
 				F576DEEA1CB7C3FE00767A88 /* TakePicture.swift in Sources */,

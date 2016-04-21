@@ -1,56 +1,44 @@
 //
-//  TakePicture.swift
+//  TakePicture2.swift
 //  SnapParty
 //
-//  Created by Fhict on 08/04/16.
+//  Created by Fhict on 21/04/16.
 //  Copyright © 2016 Fhict. All rights reserved.
 //
 
 import UIKit
 
-class TakePicture: UIViewController {
-  /*
-    @IBOutlet weak var currentImage: UIImageView!
-    // @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
-    
-    let imagePicker: UIImagePickerController! = UIImagePickerController()
-    
-    @IBAction func BtnTakePicture(sender: UIButton) {
-        if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
-            if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
-                imagePicker.allowsEditing = false
-                imagePicker.sourceType = .Camera
-                imagePicker.cameraCaptureMode = .Photo
-                presentViewController(imagePicker, animated: true, completion: {})
-            } else {
-                //   postAlert("Rear camera doesn't exist", message: "Application cannot access the camera.")
-            }
-        } else {
-            //  postAlert("Camera inaccessable", message: "Application cannot access the camera.")
-        }
+class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+        var imagePicker: UIImagePickerController!
+    @IBOutlet var imageview: UIImageView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        print("Got an image")
-        if let pickedImage:UIImage = (info[UIImagePickerControllerOriginalImage]) as? UIImage {
-            let selectorToCall = Selector("imageWasSavedSuccessfully:didFinishSavingWithError:context:")
-            UIImageWriteToSavedPhotosAlbum(pickedImage, self, selectorToCall, nil)
-             currentImage = UIImageView(image: pickedImage)
-            
-       
-        }
-        imagePicker.dismissViewControllerAnimated(true, completion: {
-            // Anything you want to happen when the user saves an image
-           self.myImageUploadRequest(self.currentImage)
-        })
+
+    @IBAction func TakePicture(sender: UIButton) {
+        imagePicker =  UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .Camera
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
+   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        var currentImage: UIImageView!
+       imageview.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        currentImage = UIImageView(image: info[UIImagePickerControllerOriginalImage] as? UIImage)
+    myImageUploadRequest(currentImage)
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        print("User canceled image")
-        dismissViewControllerAnimated(true, completion: {
-            // Anything you want to happen when the user selects cancel
-        })
+    
     }
     
     func myImageUploadRequest(pickedImage: UIImageView)
@@ -63,9 +51,9 @@ class TakePicture: UIViewController {
         request.HTTPMethod = "POST";
         
         let param = [
-            "firstName"  : "Sergey",
-            "lastName"    : "Kargopolov",
-            "userId"    : "9"
+            "firstName"  : "Robin",
+            "lastName"    : "Welten",
+            "userId"    : "1"
         ]
         
         let boundary = generateBoundaryString()
@@ -73,15 +61,15 @@ class TakePicture: UIViewController {
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         
         
-        let imageData = UIImageJPEGRepresentation(pickedImage.image!, 1)
+        let imageData = UIImageJPEGRepresentation(imageview.image!, 1)
         
         if(imageData==nil)  { return; }
         
         request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData!, boundary: boundary)
         
         
-      
-     //   myActivityIndicator.startAnimating();
+        
+        //   myActivityIndicator.startAnimating();
         
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
             data, response, error in
@@ -99,19 +87,21 @@ class TakePicture: UIViewController {
             print("****** response data = \(responseString!)")
             
             var err: NSError?
-        do
-        {
-            var json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
-            
-        }
+            do
+            {
+                var json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
+               // let datastring = NSString(data: data!, encoding:NSUTF8StringEncoding)
+                
+               // print(datastring)
+            }
             catch
             {
                 
             }
             
             dispatch_async(dispatch_get_main_queue(),{
-          //      self.myActivityIndicator.stopAnimating()
-                self.currentImage.image = nil;
+                //      self.myActivityIndicator.stopAnimating()
+               self.imageview.image = nil;
             });
             
             /*
@@ -171,11 +161,19 @@ class TakePicture: UIViewController {
 
 extension NSMutableData {
     
-//    func appendString(string: String) {
-//        let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
- //       appendData(data!)
- //   }
+    func appendString(string: String) {
+        let data = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        appendData(data!)
+    }
 
- */
- }
-    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
