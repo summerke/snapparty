@@ -9,14 +9,14 @@
 import UIKit
 
 class MyDetailsView: UIViewController {
-        
 
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let userName = NSUserDefaults.standardUserDefaults().objectForKey("userName") as! String
-        self.emailLabel.text = userName
+        self.lblEmail.text = userName
         
     }
 

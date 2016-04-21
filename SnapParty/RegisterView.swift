@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterView: UIViewController {
+class RegisterView: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var tbEmail: UITextField!
@@ -31,11 +31,14 @@ class RegisterView: UIViewController {
         self.presentViewController(myAlert, animated: true, completion: nil )
     }
     
+    // Cancel button
     @IBAction func BtnCancel(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    //Submit button
     @IBAction func BtnSubmit(sender: AnyObject) {
+        
         let email = tbEmail.text
         let password = tbPassword.text
         let passwordRepeat = tbPasswordRepeat.text
@@ -61,7 +64,7 @@ class RegisterView: UIViewController {
         let request = NSMutableURLRequest(URL: myUrl!)
         request.HTTPMethod = "POST"
         
-        let postString = "email=\(email!)&password=\(password!)"
+        let postString = "email=\(email!)&password=\(password!)&name=\(name!)"
         
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         
