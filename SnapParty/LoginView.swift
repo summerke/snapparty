@@ -64,14 +64,16 @@ class LoginView: UIViewController {
                 let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
                 
                 if let parseJSON = json {
-                    var resultValue = parseJSON["status"] as! String!
+                    let resultValue = parseJSON["status"] as! String!
                     print("result: \(resultValue)")
                    //   NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn")
                     if(resultValue == "Success") {
                         //Login is successfull
                         NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
+                        NSUserDefaults.standardUserDefaults().setObject(userEmail, forKey: "userName")
                         NSUserDefaults.standardUserDefaults().synchronize()
-                        resultValue = ""
+
+                        self.dismissViewControllerAnimated(true, completion: nil)
                     }
                     
                 }
@@ -82,12 +84,6 @@ class LoginView: UIViewController {
         }
         
         task.resume()
-        if (NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn")) {
-            self.performSegueWithIdentifier("segueIdentifier", sender: self)
-        }
-        else if(!NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn"))
-        {
-            alertMessage("Username of password incorrect!")
-        }
+        
     }
 }
