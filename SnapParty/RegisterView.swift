@@ -12,8 +12,6 @@ class RegisterView: UIViewController {
 
     
     @IBOutlet weak var tbEmail: UITextField!
-    @IBOutlet weak var tbName: UITextField!
-    @IBOutlet weak var tbPhoneNumber: UITextField!
     @IBOutlet weak var tbPassword: UITextField!
     @IBOutlet weak var tbPasswordRepeat: UITextField!
     
@@ -29,15 +27,17 @@ class RegisterView: UIViewController {
         self.presentViewController(myAlert, animated: true, completion: nil )
     }
     
+    @IBAction func BtnCancel(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func BtnSubmit(sender: AnyObject) {
         let email = tbEmail.text
-        let name = tbName.text
-        let phone = tbPhoneNumber.text
         let password = tbPassword.text
         let passwordRepeat = tbPasswordRepeat.text
         
         // Check for empty fields
-        if (email!.isEmpty || name!.isEmpty || phone!.isEmpty || password!.isEmpty || passwordRepeat!.isEmpty) {
+        if (email!.isEmpty || password!.isEmpty || passwordRepeat!.isEmpty) {
                 alertMessage("All fields have to be filled!")
                 return;
         }
