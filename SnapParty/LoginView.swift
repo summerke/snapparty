@@ -21,6 +21,18 @@ class LoginView: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func alertMessage(userMessage: String) {
+        // Alert controller
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .Alert)
+        
+        // OK button
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
+        
+        myAlert.addAction(okAction)
+        self.presentViewController(myAlert, animated: true, completion: nil )
+    }
+
+    
     @IBAction func LoginButton(sender: AnyObject) {
         
         let userEmail = tbEmail.text
@@ -52,14 +64,14 @@ class LoginView: UIViewController {
                 let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
                 
                 if let parseJSON = json {
-                    let resultValue = parseJSON["status"] as! String!
+                    var resultValue = parseJSON["status"] as! String!
                     print("result: \(resultValue)")
-                    
+                      NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn")
                     if(resultValue == "Success") {
                         //Login is successfull
                         NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
                         NSUserDefaults.standardUserDefaults().synchronize()
-                    
+                        resultValue = ""
                     }
                     
                 }
@@ -70,5 +82,12 @@ class LoginView: UIViewController {
         }
         
         task.resume()
+        if (NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn")) {
+            self.performSegueWithIdentifier("segueIdentifier", sender: self)
+        }
+        else if(!NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn"))
+        {
+            alertMessage("Username of password incorrect!")
+        }
     }
 }

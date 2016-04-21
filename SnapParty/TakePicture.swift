@@ -38,6 +38,7 @@ class TakePicture: UIViewController {
         }
         imagePicker.dismissViewControllerAnimated(true, completion: {
             // Anything you want to happen when the user saves an image
+        
         })
     }
     
