@@ -127,7 +127,14 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
             }
         }
         
-        let filename = "\(NSUserDefaults.standardUserDefaults().objectForKey("userName") as! String) - \(NSDate()) - user-profile.jpg"
+        let currentDate = NSDate()
+        
+        let username = NSUserDefaults.standardUserDefaults().objectForKey("userName") as! String
+        let dateFormatter = NSDateFormatter()
+        
+        dateFormatter.dateFormat = "MM-dd-yyyy-HH:mm"
+        let convertedDate = dateFormatter.stringFromDate(currentDate)
+        let filename = ("\(username)-\(convertedDate).jpg")
         let mimetype = "image/jpg"
         
         body.appendString("--\(boundary)\r\n")

@@ -56,7 +56,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
        let currentVerticalAccuracy = String(format: "%.4f",
                                        latestLocation.verticalAccuracy)
         
-        print(currentLongitude)
+        print(("latitude: \(currentLatitude) longitude: \(currentLongitude)"))
+        compareBar()
        
     }
     func locationManager(manager: CLLocationManager!,
@@ -64,10 +65,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+    func compareBar()
+    {
+        loadJsonData()
+    }
+    
     
     func loadJsonData()
     {
-        let url = NSURL(string: "https://www.maxvdwerf.nl/SnapParty/Photo.php")
+        let url = NSURL(string: "https://www.maxvdwerf.nl/SnapParty/bars.php")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
@@ -104,7 +110,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
        for Bar in bars
        {
-        print(Bar.name)
+        print(("naam locatie:\(Bar.name)"))
         }
     }
 
