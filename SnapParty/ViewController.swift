@@ -67,7 +67,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func loadJsonData()
     {
-        let url = NSURL(string: "https://www.maxvdwerf.nl/SnapParty/userRegister.php")
+        let url = NSURL(string: "https://www.maxvdwerf.nl/SnapParty/Photo.php")
         let request = NSURLRequest(URL: url!)
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithRequest(request) { (data, response, error) -> Void in
