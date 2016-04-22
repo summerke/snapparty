@@ -298,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiS-YH-Blu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-246" y="1034"/>
+            <point key="canvasLocation" x="-258" y="1018"/>
         </scene>
         <!--viewRegister-->
         <scene sceneID="sc7-Z0-49A">
@@ -321,6 +321,9 @@
                                 <rect key="frame" x="20" y="116" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="textFieldEditing:" destination="1SB-q6-jcH" eventType="editingDidBegin" id="413-lm-USB"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="keK-U4-KAJ">
                                 <rect key="frame" x="20" y="192" width="560" height="30"/>
@@ -363,6 +366,9 @@
                                 <rect key="frame" x="20" y="154" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no"/>
+                                <connections>
+                                    <action selector="genderfield:" destination="1SB-q6-jcH" eventType="editingDidBegin" id="iUP-gv-9Zj"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

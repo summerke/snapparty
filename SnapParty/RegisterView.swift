@@ -8,8 +8,7 @@
 
 import UIKit
 
-class RegisterView: UIViewController, UITextFieldDelegate {
-
+class RegisterView: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var tbEmail: UITextField!
     @IBOutlet weak var tbPassword: UITextField!
@@ -18,7 +17,49 @@ class RegisterView: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tbDateOfBirth: UITextField!
     @IBOutlet weak var tbGender: UITextField!
     @IBOutlet weak var tbPhoneNumber: UITextField!
+    
+    // Date of birth field
+    @IBAction func textFieldEditing(sender: UITextField) {
+        let datePickerView:UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(RegisterView.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    // Date picker function
+    func datePickerValueChanged(sender:UIDatePicker) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        tbDateOfBirth.text = dateFormatter.stringFromDate(sender.date)
+    }
 
+    // Gender field
+    @IBAction func genderfield(sender: UITextField) {
+        
+    }
+    
+    // number of components in picker view
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    // number of rows in components
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickOption.count
+    }
+    
+    // title for each row
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickOption[row]
+    }
+    
+    // Update textfield text when row is selected
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        tbGender.text = pickOption[row]
+    }
+    
     // Function alertMessage
     func alertMessage(userMessage: String) {
         // Alert controller
@@ -112,6 +153,37 @@ class RegisterView: UIViewController, UITextFieldDelegate {
         }
         
         task.resume()
+    }
+    
+    
+    //Create array to store all picker view options just before view did load
+    var pickOption = ["Male", "Female"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let pickerView = UIPickerView()
+        
+        // Pickerview Backgroundcolor = white
+        pickerView.backgroundColor = .whiteColor()
+        
+        pickerView.showsSelectionIndicator = true
+        pickerView.delegate = self
+        
+        //let toolBar = UIToolbar()
+        //toolBar.barStyle = UIBarStyle.Default
+        //toolBar.translucent = true
+        //toolBar.sizeToFit()
+        
+        //let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        //let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        //let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
+        //toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        //toolBar.userInteractionEnabled = true
+        
+        tbGender.inputView = pickerView
+        //tbGender.inputAccessoryView = toolBar
     }
     
     override func didReceiveMemoryWarning() {

@@ -15,6 +15,7 @@ class MyDetailsView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         let userName = NSUserDefaults.standardUserDefaults().objectForKey("userName") as! String
         self.lblEmail.text = userName
         
