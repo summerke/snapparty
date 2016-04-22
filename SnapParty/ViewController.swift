@@ -22,6 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //start location manager to find location
     @IBAction func btnCheckin(sender: AnyObject) {
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -34,17 +35,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidAppear(animated: Bool) {
         
         let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn")
-        
+        //if the user is not logged in it wil get the login page.
         if(!isUserLoggedIn) {
             self.performSegueWithIdentifier("loginView", sender: self)
         }
     }
+    //finds and dispays the current location of the user
     func locationManager(manager: CLLocationManager!,
                          didUpdateLocations locations: [CLLocation]!)
     {
         locationManager.stopUpdatingLocation()
         var latestLocation: AnyObject = locations[locations.count - 1]
-        
+        //sets all location variables.
        let currentLatitude = String(format: "%.4f",
                                latestLocation.coordinate.latitude)
        let currentLongitude = String(format: "%.4f",
@@ -55,22 +57,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                                latestLocation.altitude)
        let currentVerticalAccuracy = String(format: "%.4f",
                                        latestLocation.verticalAccuracy)
-        
+        //for testing it prints the current location
         print(("latitude: \(currentLatitude) longitude: \(currentLongitude)"))
         compareBar()
        
     }
+    //displays an error message when no gps is found.
     func locationManager(manager: CLLocationManager!,
                          didFailWithError error: NSError!) {
         
     }
-    
+    //todo
+    // checks if you are in a bar.
     func compareBar()
     {
         loadJsonData()
     }
     
-    
+    //loads all the bars in the database for comparison.
     func loadJsonData()
     {
         let url = NSURL(string: "https://www.maxvdwerf.nl/SnapParty/bars.php")
@@ -91,7 +95,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         dataTask.resume();
     }
-    
+    //makes the JSON data readable for an array.
     func parseJsonData(jsonObject:AnyObject)
     {
         var bars = [Bar]()
@@ -108,6 +112,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 bars.append(newBar);
             }
         }
+        //for testing purposes it displays all the names of the bars in the database.
        for Bar in bars
        {
         print(("naam locatie:\(Bar.name)"))

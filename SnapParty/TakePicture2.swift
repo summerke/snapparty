@@ -21,7 +21,7 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
         // Dispose of any resources that can be recreated.
     }
     
-
+//opens the camera to take a picture
     @IBAction func TakePicture(sender: UIButton) {
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
@@ -31,6 +31,7 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
     }
    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
+    //saves the imge in currentimage
         var currentImage: UIImageView!
      //  imageview.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         currentImage = UIImageView(image: info[UIImagePickerControllerOriginalImage] as? UIImage)
@@ -38,16 +39,17 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
     
     
     }
-    
+    //this will upload the image to the server
     func myImageUploadRequest(pickedImage: UIImageView)
     {
         
         let myUrl = NSURL(string: "https://www.maxvdwerf.nl/SnapParty/Photo.php");
         
-        
+        //uses the post method to send the image and parameters to the server.
         let request = NSMutableURLRequest(URL:myUrl!);
         request.HTTPMethod = "POST";
-        
+        //todo
+        //now hard coded but in the next version it will display the current user.
         let param = [
             "firstName"  : "Robin",
             "lastName"    : "Welten",
@@ -57,7 +59,7 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
         let boundary = generateBoundaryString()
         
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        
+        //loads the image that needs to be send.
         
         let imageData = UIImageJPEGRepresentation(pickedImage.image!, 1)
         
@@ -115,7 +117,7 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
         
     }
     
-    
+    //this properly stores the image on the server with name and path.
     func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
         let body = NSMutableData();
         

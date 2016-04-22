@@ -20,7 +20,7 @@ class LoginView: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+    //this is a method that displays a message on demand.
     func alertMessage(userMessage: String) {
         // Alert controller
         let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .Alert)

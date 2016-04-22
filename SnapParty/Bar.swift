@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//this class will make sure we can use the bars in other views.
 class Bar
 {
     var name:String
