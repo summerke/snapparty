@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		505B02741CC7D70300970189 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505B02731CC7D70300970189 /* LoginView.swift */; };
+		50748FBA1CCA25E900A25154 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50748FB91CCA25E900A25154 /* Bar.swift */; };
 		50CB12141CC8DAC30035266A /* MyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CB12131CC8DAC30035266A /* MyDetailsView.swift */; };
 		F576DEBC1CB7963A00767A88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F576DEBB1CB7963A00767A88 /* AppDelegate.swift */; };
 		F576DEBE1CB7963A00767A88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F576DEBD1CB7963A00767A88 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		505B02731CC7D70300970189 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		50748FB91CCA25E900A25154 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		50CB12131CC8DAC30035266A /* MyDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDetailsView.swift; sourceTree = "<group>"; };
 		F576DEB81CB7963A00767A88 /* SnapParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F576DEBB1CB7963A00767A88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				F576DEE91CB7C3FE00767A88 /* TakePicture.swift */,
 				F580DE9F1CC8F9E800D88D74 /* TakePicture2.swift */,
 				F5786CD71CC10DEC00254CFC /* RegisterView.swift */,
+				50748FB91CCA25E900A25154 /* Bar.swift */,
 			);
 			path = SnapParty;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F580DEA01CC8F9E800D88D74 /* TakePicture2.swift in Sources */,
+				50748FBA1CCA25E900A25154 /* Bar.swift in Sources */,
 				F576DEBE1CB7963A00767A88 /* ViewController.swift in Sources */,
 				F5786CD81CC10DEC00254CFC /* RegisterView.swift in Sources */,
 				F576DEEA1CB7C3FE00767A88 /* TakePicture.swift in Sources */,

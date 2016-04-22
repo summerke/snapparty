@@ -1,8 +1,8 @@
 //
-//  bar.swift
+//  Bar.swift
 //  SnapParty
 //
-//  Created by Fhict on 22/04/16.
+//  Created by Max van der Werf on 22/04/16.
 //  Copyright © 2016 Fhict. All rights reserved.
 //
 
