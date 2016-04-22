@@ -139,6 +139,7 @@
                                 <rect key="frame" x="269" y="285" width="62" height="30"/>
                                 <state key="normal" title="Check-in"/>
                                 <connections>
+                                    <action selector="btnCheckin:" destination="ajB-tS-gBY" eventType="touchUpInside" id="o96-8d-Kpb"/>
                                     <segue destination="oQN-jd-mnP" kind="show" id="yxp-6P-ak9"/>
                                 </connections>
                             </button>
