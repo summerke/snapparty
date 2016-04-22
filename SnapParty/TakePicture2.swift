@@ -10,7 +10,7 @@ import UIKit
 
 class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         var imagePicker: UIImagePickerController!
-    @IBOutlet var imageview: UIImageView!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,9 +34,9 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         var currentImage: UIImageView!
-       imageview.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+     //  imageview.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         currentImage = UIImageView(image: info[UIImagePickerControllerOriginalImage] as? UIImage)
-    myImageUploadRequest(currentImage)
+        myImageUploadRequest(currentImage)
     
     
     }
@@ -61,7 +61,7 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         
         
-        let imageData = UIImageJPEGRepresentation(imageview.image!, 1)
+        let imageData = UIImageJPEGRepresentation(pickedImage.image!, 1)
         
         if(imageData==nil)  { return; }
         
@@ -101,7 +101,7 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
             
             dispatch_async(dispatch_get_main_queue(),{
                 //      self.myActivityIndicator.stopAnimating()
-               self.imageview.image = nil;
+               pickedImage.image = nil;
             });
             
             /*
