@@ -155,12 +155,20 @@ class RegisterView: UIViewController, UIPickerViewDataSource, UIPickerViewDelega
         task.resume()
     }
     
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     
     //Create array to store all picker view options just before view did load
     var pickOption = ["Male", "Female"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisterView.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         let pickerView = UIPickerView()
         
