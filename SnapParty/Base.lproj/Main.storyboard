@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="57Y-BC-mNo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="57Y-BC-mNo">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -307,36 +307,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-mJ-3l6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0l7-mJ-3l6">
                                 <rect key="frame" x="20" y="78" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="2EK-sZ-dcV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0g-gM-hbK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0g-gM-hbK">
                                 <rect key="frame" x="20" y="116" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="FcD-RU-gQY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="textFieldEditing:" destination="1SB-q6-jcH" eventType="editingDidBegin" id="413-lm-USB"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="keK-U4-KAJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="keK-U4-KAJ">
                                 <rect key="frame" x="20" y="192" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="mAJ-zB-zHt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="phonePad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eXB-Lg-Zbj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eXB-Lg-Zbj">
                                 <rect key="frame" x="20" y="247" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="LIu-IC-sy0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYp-0L-tam">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password again" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYp-0L-tam">
                                 <rect key="frame" x="20" y="323" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="gtI-lF-7kO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0d6-gx-Pwi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0d6-gx-Pwi">
                                 <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="yMS-3G-EBF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
@@ -357,8 +375,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jul-Oz-Fad">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jul-Oz-Fad">
                                 <rect key="frame" x="20" y="154" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="tBp-CA-u1M"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no"/>
                                 <connections>
@@ -369,52 +390,45 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eXB-Lg-Zbj" firstAttribute="leading" secondItem="jul-Oz-Fad" secondAttribute="leading" id="13n-mA-km8"/>
+                            <constraint firstItem="0d6-gx-Pwi" firstAttribute="centerX" secondItem="55d-Zk-UKV" secondAttribute="centerX" id="1Pb-I7-rff"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="jul-Oz-Fad" secondAttribute="centerX" id="1rk-mz-tjv"/>
+                            <constraint firstItem="0l7-mJ-3l6" firstAttribute="top" secondItem="6wX-sL-QTx" secondAttribute="bottom" constant="8" id="1un-D5-Gw4"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="55d-Zk-UKV" secondAttribute="centerX" id="2NN-6m-UYf"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="leading" secondItem="55d-Zk-UKV" secondAttribute="leading" id="3eA-z8-5uv"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="top" secondItem="S4Q-6Y-896" secondAttribute="bottom" id="4Xc-WJ-WPH"/>
-                            <constraint firstItem="keK-U4-KAJ" firstAttribute="top" secondItem="jul-Oz-Fad" secondAttribute="bottom" constant="8" symbolic="YES" id="5jz-if-rd4"/>
-                            <constraint firstItem="CYp-0L-tam" firstAttribute="top" secondItem="0d6-gx-Pwi" secondAttribute="bottom" constant="8" symbolic="YES" id="6iI-mI-Zft"/>
                             <constraint firstItem="eXB-Lg-Zbj" firstAttribute="leading" secondItem="w0g-gM-hbK" secondAttribute="leading" id="6pB-IG-CJM"/>
-                            <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="keK-U4-KAJ" secondAttribute="centerX" id="6pr-YQ-aEC"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="CYp-0L-tam" secondAttribute="centerX" id="8qO-W1-WEl"/>
-                            <constraint firstItem="jul-Oz-Fad" firstAttribute="leading" secondItem="0l7-mJ-3l6" secondAttribute="leading" id="9SE-3a-LNq"/>
+                            <constraint firstItem="w0g-gM-hbK" firstAttribute="centerX" secondItem="55d-Zk-UKV" secondAttribute="centerX" id="9ET-MM-7HL"/>
+                            <constraint firstItem="CYp-0L-tam" firstAttribute="centerX" secondItem="55d-Zk-UKV" secondAttribute="centerX" id="Abt-O6-u4H"/>
                             <constraint firstItem="eXB-Lg-Zbj" firstAttribute="leading" secondItem="0l7-mJ-3l6" secondAttribute="leading" id="Cmp-R3-0fb"/>
                             <constraint firstItem="jul-Oz-Fad" firstAttribute="top" secondItem="w0g-gM-hbK" secondAttribute="bottom" constant="8" symbolic="YES" id="F5a-8k-MQ2"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="0d6-gx-Pwi" secondAttribute="centerX" id="Goa-m6-Vdx"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="top" secondItem="S4Q-6Y-896" secondAttribute="bottom" id="Gw0-il-5yh"/>
                             <constraint firstItem="eXB-Lg-Zbj" firstAttribute="top" secondItem="keK-U4-KAJ" secondAttribute="bottom" constant="8" symbolic="YES" id="HP6-ZB-cFz"/>
-                            <constraint firstItem="jul-Oz-Fad" firstAttribute="leading" secondItem="eXB-Lg-Zbj" secondAttribute="leading" id="Jgi-Gj-3AP"/>
-                            <constraint firstItem="0d6-gx-Pwi" firstAttribute="centerY" secondItem="55d-Zk-UKV" secondAttribute="centerY" id="LWX-wv-WSv"/>
+                            <constraint firstItem="eXB-Lg-Zbj" firstAttribute="centerX" secondItem="55d-Zk-UKV" secondAttribute="centerX" id="LZo-Hr-PKW"/>
                             <constraint firstAttribute="trailing" secondItem="6wX-sL-QTx" secondAttribute="trailing" id="O55-gD-Vr9"/>
                             <constraint firstItem="eXB-Lg-Zbj" firstAttribute="leading" secondItem="keK-U4-KAJ" secondAttribute="leading" id="ONw-Z8-39J"/>
-                            <constraint firstItem="jul-Oz-Fad" firstAttribute="leading" secondItem="w0g-gM-hbK" secondAttribute="leading" id="Okw-c8-064"/>
-                            <constraint firstItem="0l7-mJ-3l6" firstAttribute="top" secondItem="6wX-sL-QTx" secondAttribute="bottom" constant="14" id="P8J-qH-ai8"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="keK-U4-KAJ" secondAttribute="centerX" id="QL7-1s-6K6"/>
-                            <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="0d6-gx-Pwi" secondAttribute="centerX" id="Rr7-8T-2o7"/>
                             <constraint firstItem="eXB-Lg-Zbj" firstAttribute="leading" secondItem="CYp-0L-tam" secondAttribute="leading" id="Sq5-oi-gR6"/>
                             <constraint firstItem="eXB-Lg-Zbj" firstAttribute="leading" secondItem="55d-Zk-UKV" secondAttribute="leadingMargin" id="U1V-f5-Man"/>
-                            <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="eXB-Lg-Zbj" secondAttribute="centerX" id="UKR-Lx-FUh"/>
                             <constraint firstItem="keK-U4-KAJ" firstAttribute="top" secondItem="jul-Oz-Fad" secondAttribute="bottom" constant="8" symbolic="YES" id="VB6-Gx-VLD"/>
                             <constraint firstItem="CYp-0L-tam" firstAttribute="top" secondItem="0d6-gx-Pwi" secondAttribute="bottom" constant="8" symbolic="YES" id="VgL-ml-9kG"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="0l7-mJ-3l6" secondAttribute="centerX" id="W2b-3m-i3B"/>
+                            <constraint firstItem="jul-Oz-Fad" firstAttribute="top" secondItem="w0g-gM-hbK" secondAttribute="bottom" constant="8" id="WEa-JK-hbT"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="eXB-Lg-Zbj" secondAttribute="centerX" id="WTl-mm-Esg"/>
                             <constraint firstItem="eXB-Lg-Zbj" firstAttribute="leading" secondItem="0d6-gx-Pwi" secondAttribute="leading" id="X6V-RS-DRZ"/>
-                            <constraint firstItem="jul-Oz-Fad" firstAttribute="top" secondItem="w0g-gM-hbK" secondAttribute="bottom" constant="8" symbolic="YES" id="ZUO-YQ-3IZ"/>
-                            <constraint firstItem="jul-Oz-Fad" firstAttribute="leading" secondItem="CYp-0L-tam" secondAttribute="leading" id="aXm-s2-PIH"/>
-                            <constraint firstItem="jul-Oz-Fad" firstAttribute="leading" secondItem="55d-Zk-UKV" secondAttribute="leadingMargin" id="cL1-5f-xie"/>
-                            <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="jul-Oz-Fad" secondAttribute="centerX" id="cR7-gd-Yre"/>
+                            <constraint firstItem="w0g-gM-hbK" firstAttribute="top" secondItem="0l7-mJ-3l6" secondAttribute="bottom" constant="8" id="dCb-t4-IpL"/>
+                            <constraint firstItem="jul-Oz-Fad" firstAttribute="centerX" secondItem="55d-Zk-UKV" secondAttribute="centerX" id="eH1-x7-p9h"/>
                             <constraint firstItem="0d6-gx-Pwi" firstAttribute="top" secondItem="eXB-Lg-Zbj" secondAttribute="bottom" constant="8" symbolic="YES" id="eVx-d2-1k9"/>
-                            <constraint firstItem="jul-Oz-Fad" firstAttribute="leading" secondItem="keK-U4-KAJ" secondAttribute="leading" id="g53-vP-P0o"/>
-                            <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="CYp-0L-tam" secondAttribute="centerX" id="i1e-BG-Bl0"/>
-                            <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="w0g-gM-hbK" secondAttribute="centerX" id="lbf-hd-VFF"/>
-                            <constraint firstItem="0d6-gx-Pwi" firstAttribute="top" secondItem="eXB-Lg-Zbj" secondAttribute="bottom" constant="8" symbolic="YES" id="mB7-1k-nX5"/>
-                            <constraint firstItem="jul-Oz-Fad" firstAttribute="top" secondItem="55d-Zk-UKV" secondAttribute="top" constant="154" id="mo2-NN-yzC"/>
-                            <constraint firstItem="jul-Oz-Fad" firstAttribute="leading" secondItem="0d6-gx-Pwi" secondAttribute="leading" id="owl-IB-p6U"/>
+                            <constraint firstItem="0d6-gx-Pwi" firstAttribute="top" secondItem="eXB-Lg-Zbj" secondAttribute="bottom" constant="8" id="idc-2W-5H4"/>
+                            <constraint firstItem="keK-U4-KAJ" firstAttribute="centerX" secondItem="55d-Zk-UKV" secondAttribute="centerX" id="lWU-8f-5qs"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="leading" secondItem="55d-Zk-UKV" secondAttribute="leading" id="pFz-sc-cBb"/>
                             <constraint firstItem="0l7-mJ-3l6" firstAttribute="top" secondItem="6wX-sL-QTx" secondAttribute="bottom" constant="14" id="r0I-Qq-Uld"/>
+                            <constraint firstItem="eXB-Lg-Zbj" firstAttribute="top" secondItem="keK-U4-KAJ" secondAttribute="bottom" constant="8" id="r8y-5Y-qtS"/>
                             <constraint firstItem="eXB-Lg-Zbj" firstAttribute="top" secondItem="55d-Zk-UKV" secondAttribute="top" constant="230" id="rKc-Kd-EN9"/>
-                            <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="0l7-mJ-3l6" secondAttribute="centerX" id="vCS-Uu-5Jk"/>
+                            <constraint firstItem="CYp-0L-tam" firstAttribute="top" secondItem="0d6-gx-Pwi" secondAttribute="bottom" constant="8" id="sxV-zf-k2h"/>
+                            <constraint firstItem="keK-U4-KAJ" firstAttribute="top" secondItem="jul-Oz-Fad" secondAttribute="bottom" constant="8" id="vGV-Au-01N"/>
+                            <constraint firstItem="0l7-mJ-3l6" firstAttribute="centerX" secondItem="55d-Zk-UKV" secondAttribute="centerX" id="w7z-e6-pOn"/>
                             <constraint firstItem="6wX-sL-QTx" firstAttribute="centerX" secondItem="w0g-gM-hbK" secondAttribute="centerX" id="yea-vC-CfV"/>
                         </constraints>
                         <variation key="default">
