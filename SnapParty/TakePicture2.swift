@@ -13,8 +13,6 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         // Do any additional setup after loading the view.
     }
 
@@ -119,7 +117,7 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
     
     
     func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
-        var body = NSMutableData();
+        let body = NSMutableData();
         
         if parameters != nil {
             for (key, value) in parameters! {
@@ -129,8 +127,7 @@ class TakePicture2: UIViewController, UINavigationControllerDelegate, UIImagePic
             }
         }
         
-        let filename = "user-profile.jpg"
-        
+        let filename = "\(NSUserDefaults.standardUserDefaults().objectForKey("userName") as! String) - \(NSDate()) - user-profile.jpg"
         let mimetype = "image/jpg"
         
         body.appendString("--\(boundary)\r\n")
